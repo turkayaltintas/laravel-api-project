@@ -29,3 +29,7 @@ Bir geliştirme ortamını kurma adımları:
 Sonra tarayıcınızda `http://localhost:8000` adresini ziyaret edin.
 
 
+Postman Collection : 
+```
+    Laravel API Collection.postman_collection.json
+```
