@@ -28,6 +28,9 @@ Bir geliştirme ortamını kurma adımları:
 
 Sonra tarayıcınızda `http://localhost:8000` adresini ziyaret edin.
 
+## Postman Collection
+
+Bu projenin Postman Collection'ını [buradan](https://github.com/turkayaltintas/laravel-api-project/blob/main/Laravel%20API%20Collection.postman_collection.json) indirebilirsiniz.
 
 Postman Collection : 
 ```
