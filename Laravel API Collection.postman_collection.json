@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "6d88259e-6b29-482b-a9db-f62890734e41",
+		"name": "Laravel API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29059132"
+	},
+	"item": [
+		{
+			"name": "Kullanıcı Kaydı (Register)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Türkay ALTINTAŞ\",\r\n    \"email\": \"turkotrko@gmail.com\",\r\n    \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcı Girişi (Login)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"turkotrko@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcı Aboneliklerini Listeleme",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|OZqaIxgVyjfVXQiku5Ih4ARqv7lb2Ds6eAHIgQqQ9d16eca2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Yeni Abonelik Oluşturma",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|OZqaIxgVyjfVXQiku5Ih4ARqv7lb2Ds6eAHIgQqQ9d16eca2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"renewed_at\": \"2023-01-01\",\r\n    \"expired_at\": \"2023-12-31\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/2/subscription",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"2",
+						"subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Abonelik Güncelleme",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|OZqaIxgVyjfVXQiku5Ih4ARqv7lb2Ds6eAHIgQqQ9d16eca2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"renewed_at\": \"2023-01-01\",\r\n    \"expired_at\": \"2023-12-31\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/2/subscription/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"2",
+						"subscription",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Abonelik Silme",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|OZqaIxgVyjfVXQiku5Ih4ARqv7lb2Ds6eAHIgQqQ9d16eca2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/2/subscription",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"2",
+						"subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ödeme İşlemi Oluşturma",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|OZqaIxgVyjfVXQiku5Ih4ARqv7lb2Ds6eAHIgQqQ9d16eca2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"price\": \"100\",\r\n    \"subscription_id\": 2\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/2/transaction",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"2",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1|OZqaIxgVyjfVXQiku5Ih4ARqv7lb2Ds6eAHIgQqQ9d16eca2",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
